@@ -72,7 +72,11 @@ important metrics you're taking into consideration is _height_.
 
 You meticulously measured each player in the NCAA, but now that you have all of
 the data in front of you, you can see that you've made a horrible mistake. You
-measured all of the heights in **furlongs**.
+measured all of the heights in [**furlongs**](https://www.britannica.com/science/furlong).
+
+```py
+player_heights = [0.008, 0.008, 0.008, 0.009, 0.008, 0.01, 0.009, 0.009, 0.01, 0.008, 0.009, 0.009, 0.008, 0.008, 0.008, 0.009, 0.008, 0.009, 0.01, 0.01]
+```
 
 We could certainly write a `for` loop to handle this:
 
@@ -102,6 +106,21 @@ player_heights = [height * 7920 for height in player_heights]
 
 Now it's almost like your mistake never happened at all.
 
+```console
+> print(player_heights)
+# [63.36, 63.36, 63.36, 71.28, 63.36, 79.2, 71.28, 71.28, 79.2, 63.36, 71.28, 71.28, 63.36, 63.36, 63.36, 71.28, 63.36, 71.28, 79.2, 79.2]
+```
+
+List comprehensions are a very powerful tool, but there are jobs that a `for`
+loop is better suited for. There are two main factors to keep in mind when
+choosing between the two:
+
+1. List comprehensions should only be used for loops where the output is an
+iterable object such as a `list` or `set`
+2. `for` loops separate steps into different lines, which is how human eyes
+expect to see instructions. List comprehensions are restricted to a single line
+and can be difficult for other humans to understand.
+
 ## Instructions
 
 Time to get some practice! Write your code in the `looping.py` file. Run
@@ -111,9 +130,9 @@ of the solution for each of these deliverables in the `js/index.js` file you
 can look at (but if you want an extra challenge, try solving them in Python
 without looking at the JavaScript solution).
 
-Write a method `#happy_new_year` using a `while` or `until` loop that outputs
-numbers starting at 10 and counting down to 1. After reaching 1, print out
-"Happy New Year!"
+Write a function `happy_new_year()` using a `while` loop that outputs numbers
+starting at 10 and counting down to 1. After reaching 1, print out "Happy New
+Year!"
 
 ```py
 happy_new_year
@@ -125,16 +144,16 @@ happy_new_year
 # => Happy New Year!
 ```
 
-Write a method `#reverse_string` that takes one argument, a string, and reverses
-it. Don't use the built-in `.reverse` method. Instead, loop through the
+Write a function `reverse_string()` that takes one argument, a string, and reverses
+it. Don't use the built-in `.reverse()` method. Instead, loop through the
 characters in the input string and reverse it.
 
 ```py
 reverse_string("hello")
-# => "olleh"
+# "olleh"
 ```
 
-Write a method `#fizzbuzz` that prints the numbers from 1 to 100. For
+Write a function `fizzbuzz()` that prints the numbers from 1 to 100. For
 multiples of three, print "Fizz" instead of the number and for the multiples
 of five print "Buzz". For numbers which are multiples of both three and five,
 print "FizzBuzz".
@@ -158,5 +177,6 @@ fizzbuzz
 
 ## Resources
 
-- [Python Loops](https://www.Pythonguides.com/Python-tutorial/loops/)
-- [Mastering Python Blocks](https://mixandgo.com/learn/Python-blocks)
+- [Python For Loops](https://wiki.python.org/moin/ForLoop)
+- [Python While Loops](https://wiki.python.org/moin/WhileLoop)
+- [List Comprehension vs. For Loop](https://www.programiz.com/python-programming/list-comprehension)
