@@ -145,13 +145,16 @@ happy_new_year
 ```
 
 Write a function `reverse_string()` that takes one argument, a string, and reverses
-it. Don't use the built-in `.reverse()` method. Instead, loop through the
-characters in the input string and reverse it.
+it. Loop through the characters in the input string and reverse it.
 
 ```py
 reverse_string("hello")
 # "olleh"
 ```
+
+> NOTE: Python has a number of special ways to move through iterable objects
+> using indices. Any iterable can be reversed in Python with the simple command
+> `iterable[::-1]`. We will explore this syntax more in the next module.
 
 Write a function `fizzbuzz()` that prints the numbers from 1 to 100. For
 multiples of three, print "Fizz" instead of the number and for the multiples
@@ -159,7 +162,7 @@ of five print "Buzz". For numbers which are multiples of both three and five,
 print "FizzBuzz".
 
 ```py
-fizzbuzz
+fizzbuzz()
 # 1
 # 2
 # Fizz
@@ -172,7 +175,9 @@ fizzbuzz
 # FizzBuzz
 # 16
 # ...
-# 100
+# 98
+# Fizz
+# Buzz
 ```
 
 ## Resources
