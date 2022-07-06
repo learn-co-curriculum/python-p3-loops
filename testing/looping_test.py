@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from lib.looping import happy_new_year, reverse_string, fizzbuzz
 
