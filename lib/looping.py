@@ -4,7 +4,7 @@ def happy_new_year():
     # code goes here
     pass
 
-def reverse_string(string):
+def square_integers(int_list):
     # code goes here
     pass
 

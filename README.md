@@ -163,25 +163,21 @@ Year!"
 
 ```py
 happy_new_year
-# => 10
-# => 9
-# => 8
-# => ...
-# => 1
-# => Happy New Year!
+# 10
+# 9
+# ...
+# 2
+# 1
+# Happy New Year!
 ```
 
-Write a function `reverse_string()` that takes one argument, a string, and reverses
-it. Loop through the characters in the input string and reverse it.
+Write a function `square_integers()` that takes one argument, a list of
+integers and returns the list of squared elements.
 
 ```py
-reverse_string("hello")
-# "olleh"
+square_integers([1, 2, 3, 4, 5])
+# [1, 4, 9, 16, 25]
 ```
-
-> NOTE: Python has a number of special ways to move through iterable objects
-> using indices. Any iterable can be reversed in Python with the simple command
-> `iterable[::-1]`. We will explore this syntax more in the next module.
 
 Write a function `fizzbuzz()` that prints the numbers from 1 to 100. For
 multiples of three, print "Fizz" instead of the number and for the multiples

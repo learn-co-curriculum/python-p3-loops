@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from lib.looping import happy_new_year, reverse_string, fizzbuzz
+from lib.looping import happy_new_year, square_integers, fizzbuzz
 
 import io
 import sys
@@ -17,14 +17,13 @@ class TestHappyNewYear:
         assert(captured_out.getvalue() == \
             "10\n9\n8\n7\n6\n5\n4\n3\n2\n1\nHappy New Year!\n")
 
-class TestReverseString:
-    '''reverse_string() in looping.py'''
+class TestSquareIntegers:
+    '''square_integers() in looping.py'''
 
-    def test_returns_reverse_string(self):
-        '''returns reversed strings for "hello," "good morning," and "12345"'''
-        assert(reverse_string("hello") == "olleh")
-        assert(reverse_string("good morning") == "gninrom doog")
-        assert(reverse_string("12345") == "54321")
+    def test_square_integers(self):
+        '''returns squared ints for [1, 2, 3, 4, 5] and [-1, -2, -3, -4, -5]'''
+        assert(square_integers([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25])
+        assert(square_integers([-1, -2, -3, -4, -5]) == [1, 4, 9, 16, 25])
 
 class TestFizzBuzz:
     '''fizzbuzz() in looping.py'''
