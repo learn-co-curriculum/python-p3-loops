@@ -36,7 +36,7 @@ and experimenting with the example code.
 
 ## Basic Loops in Python
 
-In JavaScript, there are a few common approaches to for control flow that will
+In JavaScript, there are a few common approaches to control flow that will
 allow us to run the same lines of code over and over again. The most basic tool
 is the `while` loop, which works like this in JavaScript:
 
