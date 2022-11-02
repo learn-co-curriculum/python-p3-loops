@@ -141,7 +141,7 @@ loop is better suited for. There are two main factors to keep in mind when
 choosing between the two:
 
 1. List comprehensions should only be used for loops where the output is an
-iterable object such as a `list` or `set`
+iterable object such as a `list` or `set`.
 2. `for` loops separate steps into different lines, which is how human eyes
 expect to see instructions. List comprehensions are restricted to a single line
 and can be difficult for other humans to understand.

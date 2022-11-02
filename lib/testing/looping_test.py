@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from lib.looping import happy_new_year, square_integers, fizzbuzz
+from looping import happy_new_year, square_integers, fizzbuzz
 
 import io
 import sys
