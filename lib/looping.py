@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 def happy_new_year():
-    for i in range(10, 0, -1):
-        print(i)
+    countdown = 10
+    while countdown in range(10, 0, -1):
+        print(countdown)
+        countdown -= 1
     
     print("Happy New Year!")
 
