@@ -47,3 +47,16 @@ function reverseString(str) {
   }
   return reversedStr;
 }
+
+
+/*
+Write a function `square_integers()` that takes one argument, a list of
+integers and returns the list of squared elements.
+*/
+function reverseString(str) {
+  let reversedStr = "";
+  for (let i = 0; i < str.length; i++) {
+    reversedStr = str[i] + reversedStr;
+  }
+  return reversedStr;
+}
