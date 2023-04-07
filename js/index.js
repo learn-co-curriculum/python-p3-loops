@@ -47,3 +47,12 @@ function reverseString(str) {
   }
   return reversedStr;
 }
+
+
+/*
+Write a function `square_integers()` that takes one argument, a list of
+integers and returns the list of squared elements.
+*/
+function square_integers(int_list){
+  return int_list.map((num) => Math.pow(num, 2) )
+}
