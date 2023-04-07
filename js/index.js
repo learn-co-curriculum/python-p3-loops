@@ -53,10 +53,6 @@ function reverseString(str) {
 Write a function `square_integers()` that takes one argument, a list of
 integers and returns the list of squared elements.
 */
-function reverseString(str) {
-  let reversedStr = "";
-  for (let i = 0; i < str.length; i++) {
-    reversedStr = str[i] + reversedStr;
-  }
-  return reversedStr;
+function square_integers(int_list){
+  return int_list.map((num) => Math.pow(num, 2) )
 }
