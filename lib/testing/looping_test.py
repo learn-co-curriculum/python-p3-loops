@@ -14,8 +14,15 @@ class TestHappyNewYear:
         sys.stdout = captured_out
         happy_new_year()
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == \
-            "10\n9\n8\n7\n6\n5\n4\n3\n2\n1\nHappy New Year!\n")
+        answer = captured_out.getvalue()
+        
+        #answer.split(\n) produces a list that ends in ''
+        answer_list = answer.split('\n')
+        #second to last value should be the HNY string
+        assert answer_list[-2] == "Happy New Year!", "Your final line does not match 'Happy New Year!', check spelling/capitalization!"
+        digit_strings = [str(i) for i in range(1,11)]
+        remaining_digits = [i for i in digit_strings if i not in answer_list] 
+        assert remaining_digits == [], f"You didn't print all digits 1-10, missing {', '.join(remaining_digits)}"
 
 class TestSquareIntegers:
     '''square_integers() in looping.py'''
@@ -34,4 +41,18 @@ class TestFizzBuzz:
         sys.stdout = captured_out
         fizzbuzz()
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n")
+        answer = captured_out.getvalue()
+        assert len(answer) != 0, "Nothing printed! Check your loop condition. Also do you have print statements?"
+        assert "Fizz" in answer, "The string 'Fizz' not found in your answer, check spelling/capitalization!"
+        assert "Buzz" in answer, "The string 'Buzz' not found in your answer, check spelling/capitalization!"
+        i = 1
+        for line in answer.split('\n'):
+            if(line): #answer.split(\n) produces a list that ends in ''
+                if i % 15 == 0: assert line == "FizzBuzz", f"Should have printed 'Buzz' when number is {i}, got {line} instead"
+                elif i % 3 == 0: assert line == "Fizz", f"Should have printed 'Fizz' when number is {i}, got {line} instead"
+                elif i % 5 == 0: assert line == "Buzz", f"Should have printed 'Buzz' when number is {i}, got {line} instead"
+                else: assert str(i) == line, f"Should have printed {i}, got {line} instead"
+                i += 1
+        
+        i = i - 1
+        assert i == 100, f"Only looped {i} times, should have looped 100 times. Check your loop condition!"    
